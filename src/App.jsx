@@ -245,9 +245,9 @@ const AppProvider = ({ children }) => {
     }, []);
 
     const handleAIResponse = useCallback(async (userMessage, bot, chatId) => {
-        const apiKey = "YOUR_GEMINI_API_KEY"; 
+        const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
-        if (!apiKey || apiKey === "YOUR_GEMINI_API_KEY") {
+        if (!apiKey || apiKey === "VITE_GEMINI_API_KEY") {
             const errorMessage = { id: `msg-${Date.now() + 1}`, text: "The AI is not configured. Please add an API key in the code.", createdAt: new Date().toISOString(), ...bot, file: null };
             setMessages(currentMessages => ({ ...currentMessages, [chatId]: [...(currentMessages[chatId] || []), errorMessage] }));
             return;
