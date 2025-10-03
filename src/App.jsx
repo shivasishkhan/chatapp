@@ -42,16 +42,16 @@ const UsersIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
 );
 
-const APP_ICON = "/image/icon.png";
+const APP_ICON = "icon.png";
 const APP_NAME = "chatapp.fun";
 
 // --- App Context for State Management ---
 const AppContext = createContext();
 
 const AppProvider = ({ children }) => {
-    const geminiBotRef = useRef({ uid: 'bot-1', displayName: 'Gemini', photoURL: '/image/gemini.png', status: 'Online', profileComplete: true, online: true });
-    const chatGPTBotRef = useRef({ uid: 'bot-3', displayName: 'ChatGPT', photoURL: '/image/chatgpt.jpg', status: 'Online', profileComplete: true, online: true });
-    const copilotBotRef = useRef({ uid: 'bot-4', displayName: 'Copilot', photoURL: '/image/copilot.png', status: 'Online', profileComplete: true, online: true });
+    const geminiBotRef = useRef({ uid: 'bot-1', displayName: 'Gemini', photoURL: 'gemini.png', status: 'Online', profileComplete: true, online: true });
+    const chatGPTBotRef = useRef({ uid: 'bot-3', displayName: 'ChatGPT', photoURL: 'chatgpt.jpg', status: 'Online', profileComplete: true, online: true });
+    const copilotBotRef = useRef({ uid: 'bot-4', displayName: 'Copilot', photoURL: 'copilot.png', status: 'Online', profileComplete: true, online: true });
 
     const initialBots = [geminiBotRef.current, chatGPTBotRef.current, copilotBotRef.current];
 
